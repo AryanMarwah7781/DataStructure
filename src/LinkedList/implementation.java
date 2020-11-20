@@ -58,6 +58,31 @@ public class implementation {
 		}
 		}
 	}
+	public void DeleteBeg() {
+		System.out.println("Value Deleted:"+ head.data);
+		if(head!=null) {
+			head=head.next;
+		}else {
+			tail=null;
+		}
+		
+	}
+	public void removeFromLast()
+	{
+		Node node=head;
+		if(head==null) {
+			return;
+		}
+		else if(head.equals(tail)) {
+			head=null;
+			tail=null;
+		}
+		while(node.next!=tail) {
+			node=node.next;
+		}
+		tail=node;
+		tail.next=null;
+	}
 	public void search(int value)
 	{
 		Node node=head;
@@ -70,6 +95,14 @@ public class implementation {
 			}
 			flag++;
 		}
+	}
+	public static void main() {
+		implementation node=new implementation();
+		node.InsertBeg(3);
+		node.InsertBeg(2);
+		node.InsertBeg(1);
+		
+		
 	}
 	 
 	 
