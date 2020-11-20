@@ -58,6 +58,19 @@ public class implementation {
 		}
 		}
 	}
+	public void search(int value)
+	{
+		Node node=head;
+		int flag=0;
+		while(node.next!=null) {
+			if(node.data==value) {
+				System.out.println("Node Found");
+				System.out.println("Node Value:"+ node.data);
+				System.out.println("Node Index:"+ flag);
+			}
+			flag++;
+		}
+	}
 	 
 	 
 
